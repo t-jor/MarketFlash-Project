@@ -46,7 +46,7 @@ The work was structured into four sprints, as outlined below.
 
 ## Database Structure
 
-The database includes the following core tables:
+The [database](database/MarketFlash_db.db) includes the following core tables:
 
 - **Clients** – client information  
 - **Employees** – internal employees  
@@ -98,7 +98,8 @@ The dashboard answers *“How are our campaigns performing?”* with:
 ## Deliverables
 
 - ✅ Functional Database Diagram  
-- ✅ SQL scripts with test data  
+- ✅ SQL scripts with test data
+- ✅ SQLite database
 - ✅ Tableau Public dashboard  
 
 The final project deliverables were provided as a **Tableau Story**.  
