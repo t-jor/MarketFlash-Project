@@ -46,7 +46,7 @@ The work was structured into four sprints, as outlined below.
 
 ## Database Structure
 
-The [database](database/MarketFlash_db.db) includes the following core tables:
+The [database](database/marketflash.db) includes the following core tables:
 
 - **Clients** – client information  
 - **Employees** – internal employees  
