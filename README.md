@@ -55,6 +55,28 @@ The file [`database_setup.sql`](./database_setup.sql) includes:
 - At least 5 sample entries per table  
 - Example data for meaningful analysis  
 
+## Data Sources
+
+- **SQLite Database (Test Data):**  
+  Created for demonstrating the database schema, relationships, and SQL queries.  
+  Includes sample entries to validate table structure and constraints.
+
+- **Google Sheet (Live Data):**  
+  The actual campaign data used for the Tableau Dashboard was managed in Google Sheets.  
+  A cleaned version of this sheet was connected live to Tableau for building the interactive dashboards and Story.
+
+## Dashboard (Tableau)
+
+The dashboard answers *“How are our campaigns performing?”* with:
+
+- **KPIs:** Total Campaigns, Avg. Length (days), Conversion Rate, Avg. Cost, Avg. CPC, Avg. Cost per Conversion  
+- **Funnel:** Views → Likes → Clicks → Conversions (click to filter)  
+- **Time series:** Funnel over time with conversion overlay  
+- **Segments:** Audience & Channel pies (click to filter)  
+- **Geography:** Region treemap (size = #campaigns, color = #clients)  
+
+> Filters: Month, Channel, Age Range, Campaign No, Client, Executive  
+
 ## Example Queries (Extra Challenges)
 
 - **Average cost per click (CPC)**  
@@ -65,18 +87,54 @@ The file [`database_setup.sql`](./database_setup.sql) includes:
 
 - ✅ Functional ER diagram  
 - ✅ SQL scripts with test data  
-- ✅ Tableau Public dashboard (optional)  
-- ✅ Presentation slides (project summary & results)  
+- ✅ Tableau Public dashboard  
+
+The final project deliverables were provided as a **Tableau Story**.  
+The Story guides the client through the following steps:
+
+1. **Project Background & Task** – Starting point, business context, and project goals.  
+2. **Database – Functional Diagram** – Final ER diagram showing entities and relationships.  
+3. **Database – Setup** – Implementation in SQLite with schema, constraints, and test data (verified in Beekeeper Studio).  
+4. **Database – Testing** – SQL queries run on each table to confirm data integrity.  
+5. **Dashboard – Mockup** – Initial wireframe design with key KPIs, filters, and charts.  
+6. **Dashboard – Live Version** – Final Tableau dashboard with interactive filters, funnel metrics, audience/channel breakdowns, and regional campaign performance.  
 
 ## How to Use
 
-1. Clone the repository:
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/<username>/<repo>.git
-2. Open SQLite and run the setup script:
+   cd <repo>
+   ```
 
-.read database_setup.sql
-3. Extend the database with your own queries and connect it to BI tools (e.g., Tableau).
-✍️ Author: Thomas Jortzig
-📅 Year: 2025
+2. **Create the SQLite database and run the setup**
+
+   Using the SQLite CLI:
+
+   ```bash
+   sqlite3 marketflash.db
+   .read database_setup.sql
+   .tables
+   .quit
+   ```
+
+   Or with DB Browser for SQLite:
+
+   Open the app → *Execute SQL* → load `database_setup.sql` → *Run*.
+
+3. **Explore & visualize**
+
+   Run your own SQL queries against `marketflash.db`.
+
+   (Optional) Connect the DB to Tableau and replicate the dashboard:
+   - KPIs: Total Campaigns, Avg. Length (days), Conversion Rate, Avg. Cost, Avg. CPC, Avg. Cost per Conversion
+   - Funnel + time series
+   - Audience & Channel pies
+   - Region treemap (size = #campaigns, color = #clients)
+
+---
+
+📊 **Tableau Public Story Link:** [View on Tableau Public](https://public.tableau.com/shared/RMMSWWZB9?:display_count=n&:origin=viz_share_link)  
+✍️ **Author:** Thomas Jortzig  
+📅 **Date:** July 2025
