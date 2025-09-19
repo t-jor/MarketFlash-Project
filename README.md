@@ -60,11 +60,11 @@ The database includes the following core tables:
 - **Payments** – campaign-related payments  
 - **Advertisement** – ad formats and budgets  
 
-📌 See [Functional Diagram](./MarketFlash_Functional_Diagram.png).
+📌 See [Functional Diagram](docs/MarketFlash_Functional_Diagram.png).
 
 ## SQL Code
 
-The file [`database_setup.sql`](./database_setup.sql) includes:
+The file [`database_setup.sql`](sql/MarketFlash_database_setup.sql) includes:
 
 - Drop & Create statements for all tables  
 - Definition of primary & foreign keys  
