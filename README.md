@@ -72,7 +72,7 @@ The dashboard answers *“How are our campaigns performing?”* with:
 - **KPIs:** Total Campaigns, Avg. Length (days), Conversion Rate, Avg. Cost, Avg. CPC, Avg. Cost per Conversion  
 - **Funnel:** Views → Likes → Clicks → Conversions (click to filter)  
 - **Time series:** Funnel over time with conversion overlay  
-- **Segments:** Audience & Channel pies (click to filter)  
+- **Segments:** Audience & Channel performance (pie charts & filters)
 - **Geography:** Region treemap (size = #campaigns, color = #clients)  
 
 > Filters: Month, Channel, Age Range, Campaign No, Client, Executive  
@@ -126,12 +126,10 @@ The Story guides the client through the following steps:
 3. **Explore & visualize**
 
    Run your own SQL queries against `marketflash.db`.
+   (Note: the DB only includes structural design and small test data for demonstration.)  
 
-   (Optional) Connect the DB to Tableau and replicate the dashboard:
-   - KPIs: Total Campaigns, Avg. Length (days), Conversion Rate, Avg. Cost, Avg. CPC, Avg. Cost per Conversion
-   - Funnel + time series
-   - Audience & Channel pies
-   - Region treemap (size = #campaigns, color = #clients)
+   To replicate the full dashboard, Tableau needs to be connected to another dataset (Google Sheets).  
+   A published version of the dashboard is available under the link below.
 
 ---
 
